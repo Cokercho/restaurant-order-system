@@ -50,6 +50,13 @@ if choice_drink.lower()=="y":
         bill+=2.99
     elif drink==3:
         bill+=0.99
+        drinks_amount=int(input("How many drinks would you like: "))
+    if drink==1:
+        bill+=1.99*drinks_amount
+    elif drink==2:
+        bill+=2.99*drinks_amount
+    elif drink==3:
+        bill+=0.99*drinks_amount
 
 
 elif choice_drink.lower()=="n":
@@ -76,13 +83,6 @@ elif choice_drink.lower()=="n":
           bill+=14.99
     elif more.lower()=='n':
         print("Okay thank you!")
-drinks_amount=int(input("How many drinks would you like: "))
-if drink==1:
-        bill+=1.99*drinks_amount
-elif drink==2:
-        bill+=2.99*drinks_amount
-elif drink==3:
-        bill+=0.99*drinks_amount
 
         
 bill= round(bill, 2)
