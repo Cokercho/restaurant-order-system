@@ -38,7 +38,7 @@ choice_drink=input("Would you like a drink? [y/n]?")
 if choice_drink.lower()=="y":
     print("------------------")
     print("|1.Ayryan: 1.99$ |")
-    print("|2.Beer:   2.99$ |")
+    print("|2.lemonade:   2.99$ |")
     print("|3.Water:  0.99$ |")
     print("------------------")
     drink=int(input("Pick a number: "))
@@ -50,9 +50,10 @@ if choice_drink.lower()=="y":
         bill+=2.99
     elif drink==3:
         bill+=0.99
-        drinks_amount=int(input("How many drinks would you like: "))
+    drinks_amount=int(input("How many drinks would you like: "))
+    #mistake was here
     if drink==1:
-        bill+=1.99*drinks_amount
+        bill+= 1.99*drinks_amount
     elif drink==2:
         bill+=2.99*drinks_amount
     elif drink==3:
@@ -83,8 +84,6 @@ elif choice_drink.lower()=="n":
           bill+=14.99
     elif more.lower()=='n':
         print("Okay thank you!")
-
-        
 bill= round(bill, 2)
 print("Time to pay")
 print(f"Your bill is: {bill}$")
